@@ -56,8 +56,8 @@ app.get('/api/config/paypal', (req, res) => {
 app.get('/api/config/google', (req, res) => {
   res.send(process.env.GOOGLE_API_KEY || '');
 });
-app.use(express.static(path.join(__dirname, '../client/dist')));
-app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '../client/dist/index.html')));
+app.use(express.static(path.join(__dirname, './client/dist')));
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname, './client/dist/index.html')));
 
 //last middleware catches errors automatically
 app.use(errorMiddleware);

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node-dev --notify=false server",
     "start": "node server",
-    "build": "yarn && yarn --cwd client && yarn --cwd build"
+    "build": "yarn && yarn --cwd client install && yarn --cwd client build"
   },
   "type": "module",
   "author": "Aydın BULUT",
@@ -24,5 +24,8 @@
   "devDependencies": {
     "eslint": "^8.32.0",
     "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
